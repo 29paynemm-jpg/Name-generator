@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate a random name or choose one from your own list.">
+  <title>Random Name Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <p class="eyebrow">A little inspiration</p>
+      <h1>Random Name Generator</h1>
+      <p class="intro">Need a name? Make one up or let chance choose from your list.</p>
+    </header>
+
+    <section class="result-card" aria-labelledby="result-heading">
+      <p class="eyebrow" id="result-heading">Your random name</p>
+      <p class="result" id="result" aria-live="polite">Your name will appear here</p>
+    </section>
+
+    <div class="options">
+      <section class="option-card" aria-labelledby="generate-heading">
+        <span class="option-number" aria-hidden="true">01</span>
+        <h2 id="generate-heading">Make a name</h2>
+        <p>Combine a first and last name for a fresh idea.</p>
+        <button class="button button-primary" id="generate-button" type="button">
+          Generate a name
+        </button>
+      </section>
+
+      <section class="option-card" aria-labelledby="pick-heading">
+        <span class="option-number" aria-hidden="true">02</span>
+        <h2 id="pick-heading">Pick from your list</h2>
+        <p>Enter one name per line, then let the generator pick one.</p>
+        <label for="name-list">Your names</label>
+        <textarea id="name-list" rows="6" placeholder="Alex Morgan&#10;Jordan Lee&#10;Sam Taylor"></textarea>
+        <button class="button button-secondary" id="pick-button" type="button">
+          Pick a name
+        </button>
+        <p class="message" id="list-message" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <footer>
+      <p>Made with HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+</body>
+</html>
